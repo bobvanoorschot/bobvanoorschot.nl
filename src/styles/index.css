@@ -1,0 +1,30 @@
+/* :root {
+  --dark: #17252a;
+  --darkgreen: #2b7a78;
+  --green: #3aafa9;
+  --bluewhite: #def2f1;
+  --white: #feffff;
+} */
+:root {
+  --cloud: #f3f3f3;
+  --dark: #283747;
+  --purple: #3c1874;
+  --bred: #de354c;
+  --dred: #932432;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  
+}
