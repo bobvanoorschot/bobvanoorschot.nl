@@ -28,7 +28,7 @@ const Title = styled.h1`
   font-size: 6rem;
   color: var(--bred);
   z-index: 1;
-  span {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7); span {
     color: var(--purple);
     display: block;
     font-size: 5rem;
@@ -60,9 +60,11 @@ const OnTop = styled.div`
   font-size: 4rem;
   color: #fff;
   font-weight: bold;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
   &.right {
     background: var(--purple);
     right: 0;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
   }
 `
 
@@ -88,13 +90,13 @@ export default function Jumbotron() {
         ease: Power3.easeInOut,
       },
       1.5
-      )
-      tl.to(
-        ".and",
-        0.6,
-        {
-          opacity: 0,
-          ease: Power3.easeInOut,
+    )
+    tl.to(
+      ".and",
+      0.6,
+      {
+        opacity: 0,
+        ease: Power3.easeInOut,
       },
       1.6
     )

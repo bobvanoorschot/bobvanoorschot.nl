@@ -14,11 +14,12 @@ const HeaderCont = styled.header`
   justify-content: space-between;
 `
 const Logo = styled.div`
-  color: var(--dred);
+  color: var(--bred);
   font-weight: bold;
   font-size: 1.2rem;
   letter-spacing: -1px;
   line-height: 1rem;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5)
 `
 
 const Nav = styled.nav`
@@ -56,8 +57,8 @@ export default function Header() {
       </Logo>
       <Nav>
         <ul>
-          <li>Work</li>
           <li>About</li>
+          <li>Work</li>
           <li>Contact</li>
         </ul>
       </Nav>
