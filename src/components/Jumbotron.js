@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import code from "./code.json"
-import { TimelineLite, Power3, left, right } from "gsap"
+import { TimelineLite, Power3 } from "gsap/all"
 
 const Container = styled.section`
   display: flex;
