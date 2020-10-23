@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 import styled from "styled-components"
+import { TimelineLite } from "gsap"
 
 const HeaderCont = styled.header`
   position: fixed;
@@ -34,9 +35,22 @@ const Nav = styled.nav`
 `
 
 export default function Header() {
+  let header = useRef()
+  const [tl] = useState(new TimelineLite()) 
+
+  useEffect(() => {
+    tl.from(
+      header,
+      1, {
+        y: -250,
+        ease: "ease-in-out",
+      },
+      2
+    )
+  })
 
   return (
-    <HeaderCont>
+    <HeaderCont ref={el => header = el}>
       <Logo>
         Bob<br></br>van<br></br> Oorschot
       </Logo>

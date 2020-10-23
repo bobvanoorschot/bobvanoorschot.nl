@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import code from "./code.json"
-import { TimelineLite } from "gsap"
+import { TimelineLite, Power3 } from "gsap"
 
 const Container = styled.section`
   display: flex;
@@ -76,28 +76,25 @@ export default function Jumbotron() {
       left,
       1.2,
       {
-        css: {
-          left: "-50%",
-        },
-        ease: "ease-in-out",
+        left: "-50%",
+        ease: Power3.easeInOut,
       },
       1.5
     ).to(
       right,
       1.2,
       {
-        css: {
-          right: "-50%",
-        },
-        ease: "ease-in-out",
+        right: "-50%",
+        ease: Power3.easeInOut,
       },
       1.5
-    )
-    tl.to(
-      ".and",
-      0.6,
-      {
-        opacity: 0,
+      )
+      tl.to(
+        ".and",
+        0.6,
+        {
+          opacity: 0,
+          ease: Power3.easeInOut,
       },
       1.6
     )
