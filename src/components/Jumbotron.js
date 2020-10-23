@@ -40,7 +40,7 @@ const Code = styled.code`
   white-space: pre;
   color: var(--cloud2);
   z-index: 0;
-  opacity: .7;
+  opacity: 0.7;
   font-size: 1.8rem;
   right: 10%;
   bottom: 0;
@@ -76,7 +76,9 @@ export default function Jumbotron() {
       left,
       1.2,
       {
-        left: "-50%",
+        css: {
+          left: "-50%",
+        },
         ease: "ease-in-out",
       },
       1.5
@@ -84,7 +86,9 @@ export default function Jumbotron() {
       right,
       1.2,
       {
-        right: "-50%",
+        css: {
+          right: "-50%",
+        },
         ease: "ease-in-out",
       },
       1.5
