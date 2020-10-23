@@ -1,0 +1,19 @@
+{
+  "name": "gatsby-source-burobork",
+  "version": "1.0.0",
+  "description": "Gatsby source plugin for building website using BuroBork CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://burobork.nl/gatsby-source-burobork",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "graphql-request": "^1.5.1",
+    "pluralize": "^7.0.0",
+    "ramda": "^0.25.0"
+  }
+}

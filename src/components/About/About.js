@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Container = styled.section`
   height: 100vh;
-  background-color: var(--bred);
+  background-color: var(--purple);
 `
 
 export default function About( ) {

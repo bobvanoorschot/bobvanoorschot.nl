@@ -28,7 +28,8 @@ const Title = styled.h1`
   font-size: 6rem;
   color: var(--bred);
   z-index: 1;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7); span {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+  span {
     color: var(--purple);
     display: block;
     font-size: 5rem;
@@ -50,6 +51,7 @@ const Code = styled.code`
 const OnTop = styled.div`
   position: absolute;
   background: var(--bred);
+  padding: 32px;
   width: 50%;
   height: 100%;
   top: 0;

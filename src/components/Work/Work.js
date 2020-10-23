@@ -1,21 +1,42 @@
-import React from 'react';
+import { StaticQuery } from "gatsby"
+import React from "react"
 import styled from "styled-components"
-import Project from './Project';
-
-import data from './Projects.json'
+import Project from "./Project"
 
 const Container = styled.section`
   height: 100vh;
   background-color: var(--cloud);
 `
 
-export default function Work() {
-  return <Container>
-    <div>
-      {data.projects.map(project => (
-        <Project project={project} />
-      ))}
-    </div>
+export const query = graphql`
+  {
+    allItems(filter: { group: { eq: "Project" } }) {
+      edges {
+        node {
+          id
+          title
+          field
+        }
+      }
+    }
+  }
+`
 
-  </Container>
+export default function Work() {
+  return (
+    <Container>
+      <div>
+        <StaticQuery
+          query={query}
+          render={data => (
+            <>
+              {data.allItems.edges.map(project => (
+                <Project key={project.id} project={project.node.field} />
+              ))}
+            </>
+          )}
+        ></StaticQuery>
+      </div>
+    </Container>
+  )
 }
