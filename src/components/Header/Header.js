@@ -10,7 +10,7 @@ const HeaderCont = styled.header`
   padding: 16px 32px;
   display: flex;
   width: 100%;
-  justify-items: space-between;
+  justify-content: space-between;
 `
 const Logo = styled.div`
   color: var(--dred);
@@ -25,10 +25,11 @@ const Nav = styled.nav`
     display: flex;
   }
   li {
-    padding: 8px;
-    margin: 8px;
+    padding: 8px 16px;
+    margin: 8px 16px;
     font-weight: bold;
     color: var(--dark);
+    font-size: 1.8rem;
   }
 `
 

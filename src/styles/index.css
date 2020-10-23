@@ -7,6 +7,7 @@
 } */
 :root {
   --cloud: #f3f3f3;
+  --cloud2: #e3e3e3;
   --dark: #283747;
   --purple: #3c1874;
   --bred: #de354c;
@@ -26,5 +27,11 @@ body {
 ul {
   margin: 0;
   list-style: none;
-  
+}
+
+div,
+nav,
+header,
+section {
+  box-sizing: border-box;
 }

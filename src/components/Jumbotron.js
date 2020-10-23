@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import code from "./code.json"
-import { TweenMax, TimelineLite, Elastic, Back } from "gsap"
+import { TimelineLite } from "gsap"
 
 const Container = styled.section`
   display: flex;
@@ -12,6 +12,7 @@ const Container = styled.section`
   height: 100vh;
   background: var(--cloud);
   position: relative;
+  z-index: 0;
   .and {
     position: absolute;
     left: 48.5%;
@@ -23,10 +24,10 @@ const Container = styled.section`
 
 const Title = styled.h1`
   padding: 0 10%;
-  font-family: Poppins;
   font-weight: 700;
   font-size: 6rem;
   color: var(--bred);
+  z-index: 1;
   span {
     color: var(--purple);
     display: block;
@@ -37,11 +38,13 @@ const Title = styled.h1`
 const Code = styled.code`
   position: absolute;
   white-space: pre;
-  color: var(--purple);
-  font-size: 0.7rem;
-  opacity: 1;
+  color: var(--cloud2);
+  z-index: 0;
+  opacity: .7;
+  font-size: 1.8rem;
   right: 10%;
-  bottom: 10%;
+  bottom: 0;
+  user-select: none;
 `
 
 const OnTop = styled.div`
