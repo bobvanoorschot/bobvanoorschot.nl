@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
 import code from "./code.json"
-import { TimelineLite, Power3 } from "gsap/all"
+import { TimelineLite, Power3, gsap } from "gsap/all"
 
 const Container = styled.section`
   display: flex;
@@ -69,7 +69,7 @@ const OnTop = styled.div`
 export default function Jumbotron() {
   let left = useRef()
   let right = useRef()
-  const [tl] = useState(new TimelineLite({ paused: false }))
+  const [tl] = useState(gsap.timeline())
 
   useEffect(() => {
     tl.to(
