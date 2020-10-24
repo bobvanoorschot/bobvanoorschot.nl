@@ -7,9 +7,12 @@ const ProjectContainer = styled.div`
   max-height: 100vh;
   overflow: hidden;
   position: relative;
+  padding: 0 32px 16px;
   display: grid;
   background: var(--bred);
   grid-template-rows: 1fr 2fr;
+  z-index: 1;
+  isolation: isolate;
 `
 
 const Image = styled.div`
@@ -17,27 +20,107 @@ const Image = styled.div`
   height: 720px;
   overflow: hidden;
   postion: absolute;
-  transform
+  z-index: 2;
   &.project-image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    left: 0;
+    transform: skew(-10deg);
+    bottom: 0;
+    .bottom {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      &:before {
+        content: "";
+        position: absolute;
+        background: var(--bred);
+        height: 100px;
+        width: 150px;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  &.project-image-0 {
+    position: absolute;
+    left: 755px;
+    width: 150px;
+    height: 100%;
+    .bottom:before {
+      height: 300px;
+    } 
+  }
+  &.project-image-1 {
+    position: absolute;
+    left: 575px;
+    width: 150px;
+    height: 100%;
+    .bottom:before {
+      height: 200px;
+    } 
+  }
+  &.project-image-2 {
+    position: absolute;
+    left: 390px;
+    width: 150px;
+    height: 100%;
   }
 `
 const Text = styled.div`
-  display: flex;
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 16px 32px;
-  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 75%;
+  z-index: -1;
+  .inner {
+    position: relative;
+    width: 100;
+    height: 100%;
+    &:before {
+      position: absolute;
+      width: 33%;
+      height: 100%;
+      content: "";
+      background: var(--bred);
+      left: -150px;
+      transform: skew(-15deg);
+      box-shadow: 2px 0 2px rgba(0, 0, 0, 0.25);
+    }
+    &:after {
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      content: "";
+      background: var(--bred);
+      right: -150px;
+      transform: skew(-15deg);
+      box-shadow: -2px 0 2px rgba(0, 0, 0, 0.25);
+    }
+    .bar {
+      width: 50px;
+      position: absolute;
+      background: var(--bred);
+      left: 350px;
+      height: 100%;
+      transform: skew(-15deg);
+      box-shadow: -2px 0 2px rgba(0, 0, 0, 0.25), 2px 0 2px rgba(0, 0, 0, 0.25);
+      &.bar-2 {
+        left: 40%;
+      }
+      &.bar-3 {
+        left: 60%;
+      }
+    }
+  }
 `
 
 const Title = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-end;
+
   h2 {
     color: var(--bred);
     -webkit-text-stroke-width: 3px;
@@ -71,22 +154,30 @@ export default function Project({ project }) {
       <Title>
         <h2>{data.title}</h2>
       </Title>
-      <Text>
-        <Image
-          className={`project-image`}
-          style={{
-            backgroundImage: `url("https://cdn.burobork.nl/${data.fields.Images[0].reference}")`,
-          }}
-        ></Image>
-        <div
-          dangerouslySetInnerHTML={{ __html: data.fields.description.nl }}
-        ></div>
-        <Image
-          className={`project-image`}
-          style={{
-            backgroundImage: `url("https://cdn.burobork.nl/${data.fields.Images[1].reference}")`,
-          }}
-        ></Image>
+      <div
+        dangerouslySetInnerHTML={{ __html: data.fields.description.nl }}
+      ></div>
+      <Text
+        style={{
+          backgroundImage: `url("https://cdn.burobork.nl/${data.fields.Images[0].reference}")`,
+        }}
+      >
+        <div className="inner">
+          <div className="bar bar-2"></div>
+          <div className="bar bar-3"></div>
+          {/* <div className="bar"></div>
+
+          <Image className={`project-image project-image-0`}>
+            <div className="bottom"></div>
+          </Image>
+          <Image className={`project-image project-image-1`}>
+            <div className="bottom"></div>
+          </Image>
+          <div className="bar bar-3"></div>
+          <Image className={`project-image project-image-2`}>
+            <div className="bottom"></div>
+          </Image> */}
+        </div>
       </Text>
     </ProjectContainer>
   )

@@ -1,0 +1,4 @@
+
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" width="100%" id="blobSvg">
+  <path id="blob" d="M411,325Q400,400,325,403.5Q250,407,209,369.5Q168,332,131.5,291Q95,250,126.5,204Q158,158,204,131.5Q250,105,326.5,101Q403,97,412.5,173.5Q422,250,411,325Z" fill="none" stroke-width="7px" stroke="#d1d8e0"></path>
+</svg>
