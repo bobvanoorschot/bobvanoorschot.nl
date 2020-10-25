@@ -12,68 +12,17 @@ const ProjectContainer = styled.div`
   background: var(--bred);
   grid-template-rows: 1fr 2fr;
   z-index: 1;
-  isolation: isolate;
 `
 
-const Image = styled.div`
-  width: 1280px;
-  height: 720px;
-  overflow: hidden;
-  postion: absolute;
-  z-index: 2;
-  &.project-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transform: skew(-10deg);
-    bottom: 0;
-    .bottom {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      &:before {
-        content: "";
-        position: absolute;
-        background: var(--bred);
-        height: 100px;
-        width: 150px;
-        left: 0;
-        bottom: 0;
-      }
-    }
-  }
-  &.project-image-0 {
-    position: absolute;
-    left: 755px;
-    width: 150px;
-    height: 100%;
-    .bottom:before {
-      height: 300px;
-    } 
-  }
-  &.project-image-1 {
-    position: absolute;
-    left: 575px;
-    width: 150px;
-    height: 100%;
-    .bottom:before {
-      height: 200px;
-    } 
-  }
-  &.project-image-2 {
-    position: absolute;
-    left: 390px;
-    width: 150px;
-    height: 100%;
-  }
-`
 const Text = styled.div`
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
-  width: 75%;
+  width: 70%;
   z-index: -1;
+  background-size: cover;
+  background-position: center center;
   .inner {
     position: relative;
     width: 100;
@@ -122,11 +71,11 @@ const Title = styled.div`
   align-items: flex-end;
 
   h2 {
-    color: var(--bred);
+    color: transparent;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: var(--cloud);
     letter-spacing: 4px;
-    font-size: 8rem;
+    font-size: 6rem;
   }
 `
 
@@ -141,12 +90,13 @@ const Button = styled.button`
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.4s ease;
+  border: 1px solid var(--cloud);
   &:hover {
     background-color: var(--dark);
   }
 `
 
-export default function Project({ project }) {
+export default function Project({ project, onNext }) {
   const data = JSON.parse(project)
   console.log({ data })
   return (
@@ -154,9 +104,12 @@ export default function Project({ project }) {
       <Title>
         <h2>{data.title}</h2>
       </Title>
-      <div
-        dangerouslySetInnerHTML={{ __html: data.fields.description.nl }}
-      ></div>
+      <div>
+        <div
+          dangerouslySetInnerHTML={{ __html: data.fields.description.nl }}
+        ></div>
+        <Button onClick={onNext}>Next</Button>
+      </div>
       <Text
         style={{
           backgroundImage: `url("https://cdn.burobork.nl/${data.fields.Images[0].reference}")`,

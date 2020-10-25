@@ -1,11 +1,29 @@
+import React, { useState, useEffect, useRef } from "react"
 import { StaticQuery } from "gatsby"
-import React from "react"
 import styled from "styled-components"
 import Project from "./Project"
+
+import { TimelineLite } from "gsap"
 
 const Container = styled.section`
   height: 100vh;
   background-color: var(--cloud);
+  position: relative;
+  .show {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+  .right {
+    position: absolute;
+    width: 100%;
+    right: 100%;
+  }
+  .left {
+    position: absolute;
+    width: 100%;
+    right: 100%;
+  }
 `
 
 export const query = graphql`
@@ -23,20 +41,52 @@ export const query = graphql`
 `
 
 export default function Work() {
+  const [current, setCurrent] = useState(0)
+  const [nextNumber, setNextNumb] = useState(1)
+  const [tl] = useState(new TimelineLite({ paused: false }))
+
+  let right = useRef()
+
+  useEffect(() => {
+    tl.to(right, 1, {
+      left: 0,
+    })
+  })
+
   return (
     <Container>
       <div>
         <StaticQuery
           query={query}
-          render={data => (
-            <>
-              {data.allItems.edges.map(project => (
-                <Project key={project.id} project={project.node.field} />
-              ))}
-            </>
-          )}
+          render={data => {
+            console.log({ current })
+            const length = data.allItems.edges.length
+            const now = data.allItems.edges[current]
+            const next = data.allItems.edges[nextNumber]
+            return (
+              <>
+                <div className="show" ref={el => right = el}>
+                  <Project
+                    project={now.node.field}
+                    onNext={() => {
+                      let ln = getNextNumber(length, current)
+                      setCurrent(ln)
+                    }}
+                  />
+                </div>
+              </>
+            )
+          }}
         ></StaticQuery>
       </div>
     </Container>
   )
+}
+
+function getNextNumber(length, current) {
+  if (current < length - 1) {
+    return current + 1
+  } else {
+    return 0
+  }
 }
