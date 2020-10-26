@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 import styled from "styled-components"
 
 const Container = styled.section`
@@ -6,8 +6,23 @@ const Container = styled.section`
   background-color: var(--purple);
 `
 
-export default function About( ) {
-  return <Container className="about" id="about">
+const Inner = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-  </Container>
+  h2 {
+  }
+`
+
+export default function About() {
+  return (
+    <Container className="about" id="about">
+      <Inner>
+        <h2>Over</h2>
+      </Inner>
+    </Container>
+  )
 }
