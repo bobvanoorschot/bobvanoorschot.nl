@@ -7,7 +7,7 @@ const Container = styled.section`
 `
 
 export default function About( ) {
-  return <Container>
+  return <Container className="about" id="about">
 
   </Container>
 }

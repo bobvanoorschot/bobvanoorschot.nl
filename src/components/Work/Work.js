@@ -54,25 +54,28 @@ export default function Work() {
   })
 
   return (
-    <Container>
+    <Container className='work' id='work'>
       <div>
         <StaticQuery
           query={query}
           render={data => {
-            console.log({ current })
             const length = data.allItems.edges.length
             const now = data.allItems.edges[current]
             const next = data.allItems.edges[nextNumber]
             return (
               <>
-                <div className="show" ref={el => right = el}>
+                <div className="show" ref={el => (right = el)}>
                   <Project
                     project={now.node.field}
                     onNext={() => {
                       let ln = getNextNumber(length, current)
                       setCurrent(ln)
+                      setNextNumb(getNextNumber(length, ln))
                     }}
                   />
+                </div>
+                <div className="right">
+                  <Project project={next.node.field} />
                 </div>
               </>
             )
