@@ -15,6 +15,7 @@ const HeaderCont = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--cloud);
 `
 const Logo = styled.div`
   color: var(--bred);
@@ -26,7 +27,6 @@ const Logo = styled.div`
 `
 
 const Nav = styled.nav`
-  
   ul {
     display: flex;
   }
@@ -61,77 +61,11 @@ export default function Header() {
       },
       2
     )
-    tl.to(
-      logo,
-      1,
-      {
-        color: "var(--cloud)",
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top 50px",
-          end: "bottom bottom",
-          toggleActions: "restart pause restart pause",
-          scrub: .1,
-          pin: true,
-        },
-      },
-      "Start"
-    )
-    tl.to(
-      ".nav-link",
-      1,
-      {
-        color: "var(--cloud)",
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top 50px",
-          end: "bottom bottom",
-          toggleActions: "restart pause restart pause",
-          pin: true,
-          scrub: 0.1,
-        },
-      },
-      "Start"
-    )
-    tl.to(
-      ".nav-link",
-      1,
-      {
-        color: "var(--purple)",
-        scrollTrigger: {
-          trigger: "#work",
-          start: "top 50px",
-          end: "bottom bottom",
-          toggleActions: "restart pause restart pause",
-          pin: true,
-          scrub: 0.1,
-        },
-      },
-      "Start"
-    )
-    tl.to(
-      logo,
-      1,
-      {
-        color: "var(--purple)",
-        scrollTrigger: {
-          trigger: "#work",
-          start: "top 50px",
-          end: "bottom bottom",
-          toggleActions: "restart pause restart pause",
-          pin: true,
-          scrub: 0.1,
-        },
-      },
-      "Start"
-    )
   })
 
   return (
     <HeaderCont ref={el => (header = el)}>
-      <Logo
-        ref={el => (logo = el)}
-      >
+      <Logo ref={el => (logo = el)}>
         Bob<br></br>van<br></br> Oorschot
       </Logo>
       <Nav>
