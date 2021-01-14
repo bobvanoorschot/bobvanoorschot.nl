@@ -14,25 +14,37 @@ const Container = styled.section`
   position: relative;
   z-index: 0;
   .and {
+    display: none;
     position: absolute;
     left: 48.5%;
     z-index: 3;
     font-size: 5rem;
     color: var(--cloud);
+    @media (min-width: 768px) {
+     display: block;
+    }
   }
 `
 
 const Title = styled.h1`
   padding: 0 10%;
   font-weight: 700;
-  font-size: 6rem;
+  font-size: 2rem;
   color: var(--bred);
   z-index: 1;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+
+  @media (min-width: 768px) {
+    font-size: 6rem
+  }
+  
   span {
     color: var(--purple);
     display: block;
-    font-size: 5rem;
+    font-size: 1.8rem;
+    @media (min-width: 768px) {
+      font-size: 5rem
+    }
   }
 `
 
@@ -42,13 +54,17 @@ const Code = styled.code`
   color: var(--cloud2);
   z-index: 0;
   opacity: 0.7;
-  font-size: 1.8rem;
+  font-size: .8rem;
   right: 10%;
   bottom: 0;
   user-select: none;
+  @media (min-width: 768px) {
+    font-size: 1.8rem
+  }
 `
 
 const OnTop = styled.div`
+  display: none;
   position: absolute;
   background: var(--bred);
   padding: 32px;
@@ -56,7 +72,6 @@ const OnTop = styled.div`
   height: 100%;
   top: 0;
   z-index: 2;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 4rem;
@@ -67,6 +82,9 @@ const OnTop = styled.div`
     background: var(--purple);
     right: 0;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  }
+  @media (min-width: 768px) {
+    display: flex
   }
 `
 

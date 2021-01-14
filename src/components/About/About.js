@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { mediaQueries } from "../../styles/mediaQueries"
 
 const Container = styled.section`
   height: 100vh;
@@ -11,9 +12,11 @@ const Inner = styled.div`
   width: 100%;
   padding: 16px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;  
 
   h2 {
+    color: var(--cloud);
+    font-size: 36px;
   }
 `
 
