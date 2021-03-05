@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import { StaticQuery } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Project from "./Project"
 
