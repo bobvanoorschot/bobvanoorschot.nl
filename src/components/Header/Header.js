@@ -13,17 +13,24 @@ const HeaderCont = styled.header`
   z-index: 99;
   padding: 16px 32px;
   display: flex;
+  padding: 8px 16px;
   justify-content: space-between;
   align-items: center;
   background: var(--cloud);
+  @media (min-width: 768px) {
+    padding: 16px 32px;
+  }
 `
 const Logo = styled.div`
   color: var(--bred);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   letter-spacing: -1px;
   line-height: 1rem;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 `
 
 const Nav = styled.nav`
@@ -42,6 +49,24 @@ const Nav = styled.nav`
       &:hover {
       }
     }
+  }
+  .hamburger {
+    position: relative;
+    display: inline-block;
+    width: 1.25em;
+    height: 0.8em;
+    margin-right: 0.3em;
+    border-top: 0.2em solid #fff;
+    border-bottom: 0.2em solid #fff;
+  }
+
+  .hamburger:before {
+    content: "";
+    position: absolute;
+    top: 0.3em;
+    left: 0px;
+    width: 100%;
+    border-top: 0.2em solid #fff;
   }
 `
 
@@ -69,6 +94,7 @@ export default function Header() {
         Bob<br></br>van<br></br> Oorschot
       </Logo>
       <Nav>
+        <div className="hamburger"></div>
         <ul>
           <li>
             <a
