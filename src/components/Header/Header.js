@@ -11,15 +11,11 @@ const HeaderCont = styled.header`
   top: 0;
   left: 0;
   z-index: 99;
-  padding: 16px 32px;
   display: flex;
   padding: 8px 16px;
   justify-content: space-between;
   align-items: center;
   background: var(--cloud);
-  @media (min-width: 768px) {
-    padding: 16px 32px;
-  }
 `
 const Logo = styled.div`
   color: var(--bred);
@@ -50,31 +46,26 @@ const Nav = styled.nav`
       }
     }
   }
-  .hamburger {
-    position: relative;
-    display: inline-block;
-    width: 1.25em;
-    height: 0.8em;
-    margin-right: 0.3em;
-    border-top: 0.2em solid #fff;
-    border-bottom: 0.2em solid #fff;
-  }
-
-  .hamburger:before {
-    content: "";
-    position: absolute;
-    top: 0.3em;
-    left: 0px;
-    width: 100%;
-    border-top: 0.2em solid #fff;
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
   }
 `
 
 export default function Header() {
   let header = useRef()
-  let nav = useRef()
+  // let nav = useRef()
   let logo = useRef()
   const [tl] = useState(new TimelineLite())
+  const handleChange = () => {
+    if(window.scrollY >= 80){ 
+      header.style.padding = '8px 16px'
+    } 
+    else { 
+      header.style.padding = '16px 32px;' 
+    } 
+  }
 
   useEffect(() => {
     tl.from(
@@ -86,15 +77,22 @@ export default function Header() {
       },
       2
     )
+    window.addEventListener('scroll', handleChange);     
   })
 
   return (
-    <HeaderCont ref={el => (header = el)}>
+    <HeaderCont ref={el => (header = el)} >
       <Logo ref={el => (logo = el)}>
         Bob<br></br>van<br></br> Oorschot
       </Logo>
       <Nav>
-        <div className="hamburger"></div>
+        <div className="hamburger">
+          <svg viewBox="0 0 100 80" width="20" height="20">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+        </div>
         <ul>
           <li>
             <a
