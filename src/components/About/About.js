@@ -27,6 +27,10 @@ const Inner = styled.div`
     flex-direction: column;
     justify-content: space-around;
   }
+  .image {
+    grid-row: 2;
+    grid-column-start: 5;
+  }
   p {
     flex: 1 1;
     color: var(--cloud);
@@ -65,8 +69,10 @@ export default function About() {
             kunnen aanleren. Als autodidact heb ik in de afgelopen 7 jaar
             ervaring opgedaan binnen mijn eigen bedrijf en in dienst van een
             groot softwarebedrijf.
-          </p>
-          
+          </p>          
+        </div>
+        <div className="image">
+          <img src="/images/bob.png"></img>
         </div>
       </Inner>
     </Container>
