@@ -60,7 +60,7 @@ export default function Contact() {
           <div className="links">
             <p>Voor meer informatie:</p>
             <a href="https://www.linkedin.com/in/bobvanoorschot/">LinkedIn</a>
-            <a href="mailto:info@bobvanoorschot.nl">GitHub</a>
+            <a href="https://github.com/bobvanoorschot">GitHub</a>
           </div>
         </div>
       </Section>
