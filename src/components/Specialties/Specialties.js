@@ -80,7 +80,7 @@ export default function Specialties({ locale }) {
               </li>
               <li>
                 <i className="icon css"></i>CSS / <i className="icon sass"></i>
-                SASS / <i className="icon less"></i>LESS / PostCss
+                SASS / <i className="icon less"></i>LESS / <i className="icon postcss"></i>PostCss
               </li>
               <li>
                 <i className="icon graphql"></i>GraphQL

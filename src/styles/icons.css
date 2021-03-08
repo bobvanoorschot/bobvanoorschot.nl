@@ -54,6 +54,9 @@ i.icon.php {
 i.icon.postgresql {
   background-image: url('/icons/postgresql-icon.svg');
 }
+i.icon.postcss {
+  background-image: url('/icons/postcss.svg');
+}
 i.icon.postman {
   background-image: url('/icons/getpostman-icon.svg');
 }
