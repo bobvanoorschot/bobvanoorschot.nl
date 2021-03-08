@@ -6,7 +6,7 @@ import Project from "./Project"
 import { TimelineLite } from "gsap"
 
 const Container = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--cloud);
   position: relative;
   .show {

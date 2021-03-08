@@ -11,8 +11,10 @@ const Inner = styled.div`
   height: 100%;
   width: 100%;
   padding: 16px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 
   h2 {
     color: var(--cloud);
@@ -30,6 +32,9 @@ const Inner = styled.div`
   .image {
     grid-row: 2;
     grid-column-start: 5;
+    img {
+      max-width: 100%;
+    }
   }
   p {
     flex: 1 1;
@@ -69,7 +74,7 @@ export default function About() {
             kunnen aanleren. Als autodidact heb ik in de afgelopen 7 jaar
             ervaring opgedaan binnen mijn eigen bedrijf en in dienst van een
             groot softwarebedrijf.
-          </p>          
+          </p>
         </div>
         <div className="image">
           <img src="/images/bob.png"></img>

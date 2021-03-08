@@ -3,15 +3,17 @@ import styled from "styled-components"
 
 const ProjectContainer = styled.div`
   width: 100%;
-  height: 100vh;
-  max-height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
   padding: 0 32px 16px;
-  display: grid;
   background: var(--bred);
-  grid-template-rows: 1fr 2fr;
   z-index: 1;
+  @media (min-width: 768px) {
+    grid-template-rows: 1fr 2fr;
+    display: grid;
+    
+  }
 `
 
 const Text = styled.div`
@@ -23,6 +25,10 @@ const Text = styled.div`
   z-index: -1;
   background-size: cover;
   background-position: center center;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
   .inner {
     position: relative;
     width: 100;
@@ -75,7 +81,10 @@ const Title = styled.div`
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: var(--cloud);
     letter-spacing: 4px;
-    font-size: 6rem;
+    font-size: 3rem;
+    @media (min-width: 768px) {
+      font-size: 6rem;
+    }
   }
 `
 
@@ -83,6 +92,7 @@ const Button = styled.button`
   border: 0;
   background: var(--purple);
   padding: 16px 32px;
+  margin: 16px 0 0;
   font-size: 1rem;
   font-weight: bold;
   color: var(--cloud);

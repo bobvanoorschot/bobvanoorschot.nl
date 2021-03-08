@@ -9,8 +9,10 @@ const Container = styled.section`
 const Section = styled.section`
   width: 100;
   padding: 16px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
   h2 {
     color: var(--bred);
     font-size: 36px;
@@ -24,12 +26,17 @@ const Section = styled.section`
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 5;
-    display: grid;
-    grid-row-gap: 32px;
-    grid-template-columns: 1fr 1fr;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-row-gap: 32px;
+      grid-template-columns: 1fr 1fr;
+    }
   }
   ul {
+    margin: 0;
+    padding: 0;
     li {
+      margin: 0;
       font-size: 18px;
       display: flex;
       align-items: center;
