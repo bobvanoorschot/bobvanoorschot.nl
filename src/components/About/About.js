@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { mediaQueries } from "../../styles/mediaQueries"
+// import { mediaQueries } from "../../styles/mediaQueries"
 
 const Container = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--purple);
 `
 
@@ -66,21 +66,7 @@ export default function About() {
             ervaring opgedaan binnen mijn eigen bedrijf en in dienst van een
             groot softwarebedrijf.
           </p>
-          <ul>
-            <li>Ruby on Rails</li>
-            <li>Javascript</li>
-            <li>React (Gatsbyjs, NextJS)</li>
-            <li>CSS/SASS/LESS/PostCss</li>
-            <li>GraphQL</li>
-          </ul>
-          <ul>
-            <li>PHP</li>
-            <li>Wordpress</li>
-            <li>Symfony</li>
-          </ul>
-          <ul>
-            <li>VueJS</li>
-          </ul>
+          
         </div>
       </Inner>
     </Container>

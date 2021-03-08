@@ -1,0 +1,80 @@
+i.icon {
+  height: 24px;
+  width: 24px;  
+  margin: 0 8px 0 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+i.icon.aws {
+  background-image: url('/icons/amazon_aws-icon.svg');
+}
+i.icon.ant {
+  background-image: url('/icons/ant.svg');
+}
+i.icon.css {
+  background-image: url('/icons/css.svg');
+}
+i.icon.gatsbyjs {
+  background-image: url('/icons/gatsbyjs-icon.svg');
+}
+i.icon.bootstrap {
+  background-image: url('/icons/getbootstrap-icon.svg');
+}
+i.icon.figma {
+  background-image: url('/icons/figma.svg');
+}
+i.icon.git {
+  background-image: url('/icons/git-scm-icon.svg');
+}
+i.icon.gitlab {
+  background-image: url('/icons/gitlab-icon.svg');
+}
+i.icon.github {
+  background-image: url('/icons/github-icon.svg');
+}
+i.icon.graphql {
+  background-image: url('/icons/graphql-icon.svg');
+}
+i.icon.javascript {
+  background-image: url('/icons/javascript.svg');
+}
+i.icon.less {
+  background-image: url('/icons/lesscss-icon.svg');
+}
+i.icon.mysql {
+  background-image: url('/icons/mysql-icon.svg');
+}
+i.icon.nextjs {
+  background-image: url('/icons/nextjs.svg');
+}
+i.icon.php {
+  background-image: url('/icons/php-icon.svg');
+}
+i.icon.postgresql {
+  background-image: url('/icons/postgresql-icon.svg');
+}
+i.icon.postman {
+  background-image: url('/icons/getpostman-icon.svg');
+}
+i.icon.reactjs {
+  background-image: url('/icons/reactjs-icon.svg');
+}
+i.icon.redis {
+  background-image: url('/icons/redis-icon.svg');
+}
+i.icon.ruby {
+  background-image: url('/icons/ruby-lang-icon.svg');
+}
+i.icon.sass {
+  background-image: url('/icons/sass-lang-icon.svg');
+}
+i.icon.symfony {
+  background-image: url('/icons/symfony-icon.svg');
+}
+i.icon.vuejs {
+  background-image: url('/icons/vuejs-icon.svg');
+}
+i.icon.wordpress {
+  background-image: url('/icons/wordpress-icon.svg');
+}

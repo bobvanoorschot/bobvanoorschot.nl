@@ -120,16 +120,16 @@ export default function Project({ project, onNext }) {
           <div className="bar bar-3"></div>
           {/* <div className="bar"></div>
 
-          <Image className={`project-image project-image-0`}>
-            <div className="bottom"></div>
-          </Image>
-          <Image className={`project-image project-image-1`}>
-            <div className="bottom"></div>
-          </Image>
-          <div className="bar bar-3"></div>
-          <Image className={`project-image project-image-2`}>
-            <div className="bottom"></div>
-          </Image> */}
+<Image className={`project-image project-image-0`}>
+<div className="bottom"></div>
+</Image>
+<Image className={`project-image project-image-1`}>
+<div className="bottom"></div>
+</Image>
+<div className="bar bar-3"></div>
+<Image className={`project-image project-image-2`}>
+<div className="bottom"></div>
+</Image> */}
         </div>
       </Text>
     </ProjectContainer>
