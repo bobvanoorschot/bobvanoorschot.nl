@@ -49,8 +49,8 @@ export default function Contact() {
         <div className="contact" id="contact">
           <h2>Neem contact met mij op:</h2>
           <p>
-            Als developer heb ik veel mijn telefoon op niet storen staan
-            staan en ben ik beter te bereiken via e-mail. Stuur een email en dan
+            Als developer heb ik veel mijn telefoon op niet storen modus staan
+            en ben ik beter te bereiken via e-mail. Stuur een email en dan
             maken we een bel/videobel afspaak.
           </p>
           <div className="ways">
