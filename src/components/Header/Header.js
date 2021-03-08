@@ -56,15 +56,15 @@ const Nav = styled.nav`
 export default function Header() {
   let header = useRef()
   // let nav = useRef()
-  let logo = useRef()
+  // let logo = useRef()
   const [tl] = useState(new TimelineLite())
   const handleChange = () => {
-    if(window.scrollY >= 80){ 
-      header.style.padding = '8px 16px'
-    } 
-    else { 
-      header.style.padding = '16px 32px;' 
-    } 
+    // if(window.scrollY >= 80){ 
+    //   header.style.padding = '8px 16px'
+    // } 
+    // else { 
+    //   header.style.padding = '16px 32px;' 
+    // } 
   }
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function Header() {
 
   return (
     <HeaderCont ref={el => (header = el)} >
-      <Logo ref={el => (logo = el)}>
+      <Logo >
         Bob<br></br>van<br></br> Oorschot
       </Logo>
       <Nav>
