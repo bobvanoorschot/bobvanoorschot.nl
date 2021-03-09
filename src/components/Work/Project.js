@@ -12,7 +12,9 @@ const ProjectContainer = styled.div`
   @media (min-width: 768px) {
     grid-template-rows: 1fr 2fr;
     display: grid;
-    
+    .text-container {
+      max-width: 30%;
+    }
   }
 `
 
@@ -115,7 +117,7 @@ export default function Project({ project, onNext }) {
         <h2>{data.title}</h2>
       </Title>
       <div>
-        <div
+        <div className="text-container"
           dangerouslySetInnerHTML={{ __html: data.fields.description.nl }}
         ></div>
         <Button onClick={onNext}>Next</Button>
