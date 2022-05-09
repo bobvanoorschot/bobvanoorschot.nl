@@ -1,5 +1,3 @@
 {
-  "jumbotron": "# app/models/current.rb \n class Current < ActiveSupport::CurrentAttributes \n  attribute :owner, :user, :landlord \n attribute :request_id, :user_agent, :ip_address\n \n  # \n # Set current user\n   #\n \n\n  # @param [User] user for current class\n   #\n   def user=(user)\n \n    super \n\n    self.owner = user.owner\n   end \n
-end
-"
+  "jumbotron": "# app/models/current.rb \n class Current < ActiveSupport::CurrentAttributes \n  attribute :owner, :user, :landlord \n attribute :request_id, :user_agent, :ip_address\n \n  # \n # Set current user\n   #\n \n\n  # @param [User] user for current class\n   #\n   def user=(user)\n \n    super \n\n    self.owner = user.owner\n   end \n\nend \n"
 }
