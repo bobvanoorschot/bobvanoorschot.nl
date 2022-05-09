@@ -123,14 +123,14 @@ export default function Jumbotron() {
   })
   return (
     <Container>
-      <OnTop ref={el => (left = el)}>Frontend developer</OnTop>
+      <OnTop ref={el => (left = el)}>Ruby developer</OnTop>
       <div className="and">&amp;</div>
       <OnTop ref={el => (right = el)} className="right">
-        Backend developer
+        Rails developer
       </OnTop>
       <Container>
         <Title>
-          Full-Stack Developer
+          Ruby on Rails Developer
           <span>Bob van Oorschot</span>
         </Title>
         <Code>{code.jumbotron}</Code>
