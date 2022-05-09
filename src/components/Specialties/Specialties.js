@@ -73,6 +73,9 @@ export default function Specialties({ locale }) {
               <li>
                 <i className="icon redis"></i>Redis
               </li>
+              <li>
+                <i className="icon heroku"></i>Heroku
+              </li>
             </ul>
           </div>
           <div>
