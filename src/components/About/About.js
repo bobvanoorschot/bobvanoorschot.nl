@@ -78,9 +78,8 @@ export default function About() {
           <p>
             De laatste jaren verschuift mijn focus van puur bouwen naar
             ontwerpen: ik werk aan logging, monitoring en betrouwbare
-            architectuur, en denk mee over de keuzes die een systeem op lange
-            termijn dragen. Die stap naar een rol als solution architect zet ik
-            bewust.
+            architectuur, en denk graag mee over de keuzes die een systeem op
+            lange termijn dragen.
           </p>
         </div>
         <div className="image">
