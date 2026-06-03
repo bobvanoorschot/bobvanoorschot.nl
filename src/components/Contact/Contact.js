@@ -50,11 +50,11 @@ export default function Contact() {
           <h2>Neem contact met mij op:</h2>
           <p>
             Als developer heb ik veel mijn telefoon op niet storen modus staan
-            en ben ik beter te bereiken via e-mail. Stuur een email en dan
-            maken we een bel/videobel afspaak.
+            en ben ik beter te bereiken via e-mail. Stuur een e-mail en dan
+            maken we een bel- of videobelafspraak.
           </p>
           <div className="ways">
-            <a href="mailto:info@bobvanoorschot.nl">info@bobvanoorschot.nl</a>
+            <a href="mailto:bob@bobvanoorschot.com">bob@bobvanoorschot.com</a>
           </div>
 
           <div className="links">

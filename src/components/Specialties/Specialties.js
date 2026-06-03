@@ -56,7 +56,7 @@ export default function Specialties({ locale }) {
         <h2>Skills</h2>
         <div className="skills">
           <div>
-            <h3>Ruby on Rails developer</h3>
+            <h3>Backend developer</h3>
             <ul>
               <li>
                 <i className="icon ruby"></i>Ruby on Rails
@@ -65,7 +65,7 @@ export default function Specialties({ locale }) {
                 <i className="icon graphql"></i>GraphQL
               </li>
               <li>
-                <i className="icon mysql"></i>MysQL
+                <i className="icon mysql"></i>MySQL
               </li>
               <li>
                 <i className="icon postgresql"></i>PostgreSQL
@@ -124,11 +124,20 @@ export default function Specialties({ locale }) {
             </ul>
           </div>
           <div>
+            <h3>Logging &amp; monitoring</h3>
+            <ul>
+              <li>Datadog</li>
+              <li>Sentry</li>
+              <li>AppSignal</li>
+              <li>ElasticSearch</li>
+            </ul>
+          </div>
+          <div>
             <h3>Tools:</h3>
             <ul>
               <li>
                 <i className="icon figma"></i>Figma
-              </li>             
+              </li>
               <li>
                 <i className="icon git"></i>Git
               </li>             

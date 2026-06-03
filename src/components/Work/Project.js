@@ -124,7 +124,7 @@ export default function Project({ project, onNext }) {
       </div>
       <Text
         style={{
-          backgroundImage: `url("https://cdn.burobork.nl/${data.fields.Images[0].reference}")`,
+          backgroundImage: `url("https://cms.burobork.nl/images/${data.fields.Images[0].reference}")`,
         }}
       >
         <div className="inner">

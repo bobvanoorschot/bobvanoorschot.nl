@@ -70,10 +70,17 @@ export default function About() {
           <p>
             Mensen noemen mij een optimist en daar herken ik mijzelf zeker in;
             mijn overtuiging is dat alles kan, ik moet alleen nog uitvinden hoe.
-            Die drive maakt dat ik mijzelf het vak van full stack developer heb
-            kunnen aanleren. Als autodidact heb ik in de afgelopen 7 jaar
-            ervaring opgedaan binnen mijn eigen bedrijf en in dienst van een
-            groot softwarebedrijf.
+            Die drive maakt dat ik mijzelf het vak van developer heb kunnen
+            aanleren. Als autodidact heb ik in de afgelopen 10 jaar ervaring
+            opgedaan binnen mijn eigen bedrijf en in dienst van een groot
+            softwarebedrijf.
+          </p>
+          <p>
+            De laatste jaren verschuift mijn focus van puur bouwen naar
+            ontwerpen: ik werk aan logging, monitoring en betrouwbare
+            architectuur, en denk mee over de keuzes die een systeem op lange
+            termijn dragen. Die stap naar een rol als solution architect zet ik
+            bewust.
           </p>
         </div>
         <div className="image">
